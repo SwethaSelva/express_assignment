@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shopping List</title>
+  <link href="../assets/style.css" rel="stylesheet" type="text/css">
+  <link href="../assets/script.js" rel="javascript">
+</head>
+<body>
+  <form action="/items" method="POST">
+    <div class="addItem">
+      <label for="itemName"> Name</label>
+      <input type="text" name="itemName">
+      <label for="category">Category</label>
+      <input type="text" name="category">
+      <label for="price">Price</label>
+      <input type="text" name="price">
+      <label for="discount">Discount</label>
+      <input type="text" name="discount">
+      <button type="submit" name="addItem">Add item</button>
+    </div>
+  </form>
+  <% for (let i = 0; i < items.length; i++) {%>
+    <div class="item">
+      <div class="name">
+        <p><strong>Name:</strong><input disabled value=<%= items[i].itemName%>></p>
+      </div>
+      <div class="category">
+        <p><strong>Category:</strong><input disabled value=<%= items[i].category%>></p>
+      </div>
+      <div class="price">
+        <p><strong>Price:</strong><input disabled value=<%= items[i].price%>></p>
+      </div>
+      <div class="discount">
+        <p><strong>Save - </strong><input disabled value=<%= items[i].discount%>></p>
+      </div>
+      <button>Edit</button>
+      <button>Delete</button>
+    </div>
+  <% } %>
+</body>
+</html>

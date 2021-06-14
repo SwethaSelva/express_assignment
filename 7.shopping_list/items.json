@@ -1,0 +1,25 @@
+[{
+    "id": "1",
+    "itemName": "mobile",
+    "price": "23000",
+    "category": "Electronic",
+    "discount": "45%"
+}, {
+    "id": "2",
+    "itemName": "Polo T-shirt",
+    "price": "2000",
+    "category": "Men's Wear",
+    "discount": "15%"
+}, {
+    "id": "3",
+    "itemName": "Dettol",
+    "price": "312",
+    "category": "Laundry essentials",
+    "discount": "5%"
+}, {
+    "id": "4",
+    "itemName": "Cloth Mask",
+    "price": "253",
+    "category": "Essentials",
+    "discount": "5%"
+}]
