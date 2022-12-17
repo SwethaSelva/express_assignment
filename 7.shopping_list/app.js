@@ -23,21 +23,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // CRUD
 app.get('/items', (req, res) => {
   res.json(items);
-  // res.render('index.ejs', { items });
+  res.render('index.ejs', { items });
 });
 
 app.get('/items/:id', (req, res) => {
   let { id } = req.params;
   let newItem = items.filter(item => item.id === +id); // param id string to number
   res.json(newItem);
-  // res.render('index.ejs', { items: newItem });
+  res.render('index.ejs', { items: newItem });
 });
 
 app.post('/items', function (req, res) {
   let addItem = req.body;
   items.unshift({ id: items.length, ...addItem });
   res.json(items)
-  // res.render('index.ejs', { items });
+  res.render('index.ejs', { items });
 });
 
 app.patch('/items/:id', (req, res) => {
@@ -51,6 +51,6 @@ app.delete('/items/:id', (req, res) => {
   let { id } = req.params;
   items = items.filter(item => item.id !== +id); // param id string to number
   res.json(items);
-  // res.render('index.ejs', { items });
+  res.render('index.ejs', { items });
 });
 app.listen(8080);
